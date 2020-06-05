@@ -1,0 +1,73 @@
+<!-- author: Jake Schlaerth -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Workout Tracking</title>
+  </head>
+  <body>
+    <!--Add  Row Form-->
+    <!--Name, reps, weight, unit, date, submit button-->
+    <h1>Add Row</h1>
+    <form method="POST" id="postForm">
+        <label>
+            Name:
+            <input type="text" name="name" id="nameInput"/>
+        </label>
+        <label>Reps:
+            <input type="number" name="reps" id="repsInput"/>
+        </label>
+        <label>Weight:
+            <input type="number" name="weight" id="weightInput"/>
+        </label>
+        
+        <label>lbs
+            <input type="radio" name="units" value="0" id="lbsInput" checked/>
+        </label>
+        <label>kg
+            <input type="radio" name="units" value="1" id="kgInput"/>
+        </label>
+        <label>Date:
+            <input type="date" name="date" id="dateInput"/>
+        </label>
+        <input type="submit" value="submit" id="newRowSubmit" />
+        
+    </form>
+    <br>
+    <form method="GET" id="resetForm">
+        <input type="submit" value="reset table" id="resetSubmit" />
+    </form>
+
+    <!-- table of data -->
+    <!-- Rows with id, name, reps, weight, unit, date, update button, delete button -->
+    <h1>
+        Workout Table
+    </h1>
+    <table id="workoutTable">
+        <tr>
+            <th style="visibility:hidden;">id</th>
+            <th>name</th>
+            <th>reps</th>
+            <th>weight</th>
+            <th>unit</th>
+            <th>date</th>
+            <th>submit button</th>
+            <th>delete button</th>
+        </tr>
+        <!-- <tr>
+            <form>
+                <td>1</td>
+                <td><input type="text" name="name" value="situps"></td>
+                <td><input type="number" name="reps" value=40></td>
+                <td><input type="number" name="weight" value=25></td>
+                <td><input type="radio" name="units" value=1></td>
+                <td><input type=date name="date" value="2020-05-10"></td>
+                <td><button>Update</button></td>
+                <td><button>Delete</button></td>   
+            </form>
+        </tr> -->
+    </table>
+    <script src="script.js"></script>  
+  </body>
+</html>
